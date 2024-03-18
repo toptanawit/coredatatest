@@ -37,30 +37,3 @@ struct Queue<T> {
     }
 }
 
-struct TimeSpan: Hashable, Comparable {
-    static func < (lhs: TimeSpan, rhs: TimeSpan) -> Bool {
-        let lhsTotalSeconds = lhs.hours * 3600 + lhs.minutes * 60 + lhs.seconds
-        let rhsTotalSeconds = rhs.hours * 3600 + rhs.minutes * 60 + rhs.seconds
-        return lhsTotalSeconds < rhsTotalSeconds
-    }
-    
-    var hours: Int
-    var minutes: Int
-    var seconds: Int
-
-    init(hours: Int, minutes: Int, seconds: Int) {
-        self.hours = hours
-        self.minutes = minutes
-        self.seconds = seconds
-    }
-
-    func toTimeInterval() -> TimeInterval {
-        return TimeInterval((hours * 3600) + (minutes * 60) + seconds)
-    }
-}
-
-extension TimeInterval {
-    func toTimeSpan() -> TimeSpan {
-        return TimeSpan(hours: Int(self)/3600, minutes: (Int(self)%3600)/60, seconds: Int(self)%60)
-    }
-}

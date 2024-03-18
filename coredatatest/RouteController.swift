@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-
+/*
 func getAllPossibleRoutes(start: String, end: String) -> [Route] {
     var adjacencyList: [String: [String]] = [:]
     var stations: [String] = []
@@ -292,7 +292,7 @@ func getAllPossibleRoutes(start: String, end: String) -> [Route] {
 
     return allRoutes
 }
-
+*/
 
 
 // for command line only
@@ -442,6 +442,7 @@ func getAllPossibleRoutes2(start: String, end: String) -> [Route] {
     
     //fees
     var allFees: [Int] = []
+    var allTotalTime: [String] = []
     for stations in stationsAllData {
         var fees = 0
         var bCount = 0
@@ -568,17 +569,63 @@ func getAllPossibleRoutes2(start: String, end: String) -> [Route] {
         }
 
         allFees.append(fees)
+        
+        //time
+        var totalTime: TimeInterval = 0
+            
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Bangkok")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        var currentTimeInterval = Date().timeIntervalSince(dateFormatter.date(from: "2024-03-12 00:00:00")!)
+        // + delay 18 mins (not sure why)
+        currentTimeInterval += 18 * 60
+        currentTimeInterval = currentTimeInterval.truncatingRemainder(dividingBy: 86400)
+        
+//        for key in timetable.keys.sorted() {
+//            if key.toTimeInterval() < currentTimeInterval {
+//                for _ in 0..<bCount {
+//                    totalTime += timetable[key]!.toTimeInterval()
+//                }
+//            }
+//        }
+//        
+//        for key in blueTimetable.keys.sorted() {
+//            if key.toTimeInterval() < currentTimeInterval {
+//                for _ in 0..<mCount {
+//                    totalTime += blueTimetable[key]!.toTimeInterval()
+//                }
+//            }
+//        }
+//        
+//        for key in purpleTimetable.keys.sorted() {
+//            if key.toTimeInterval() < currentTimeInterval {
+//                for _ in 0..<mpCount {
+//                    totalTime += purpleTimetable[key]!.toTimeInterval()
+//                }
+//            }
+//        }
+        
+        // each bts station take est 2 mins
+        totalTime += Double(bCount * (2 * 60))
+        
+        // each mrt blue station take est 2 mins
+        totalTime += Double(mCount * (2 * 60))
+        
+        // each mrt purple station take est 3 mins
+        totalTime += Double(mpCount * (3 * 60))
+        
+        // each arl station take est 3 mins 40 secs
+        totalTime += Double(aCount * (3 * 60 + 40))
+        
+        allTotalTime.append(totalTime.toTimeSpan().toDateString())
+        
+//        print(bCount,mCount,mpCount,aCount,"---")
     }
     
-    
-    //time
-
-    
-
     var allRoutes: [Route] = []
         
     for (index, element) in stationsAllData.enumerated() {
-        allRoutes.append(Route(stations: element, fee: allFees[index]))
+        allRoutes.append(Route(stations: element, fee: allFees[index], time: allTotalTime[index]))
     }
 
     return allRoutes
