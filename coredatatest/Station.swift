@@ -5,9 +5,9 @@
 //  Created by Tanawit Poumloyfha on 10/3/2567 BE.
 //
 
-import Cocoa
+import Foundation
 
-class Station: NSObject {
+struct Station: Decodable {
 
     var station_id: String
     var station_name: String

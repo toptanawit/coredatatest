@@ -58,3 +58,9 @@ struct TimeSpan: Hashable, Comparable {
         return TimeInterval((hours * 3600) + (minutes * 60) + seconds)
     }
 }
+
+extension TimeInterval {
+    func toTimeSpan() -> TimeSpan {
+        return TimeSpan(hours: Int(self)/3600, minutes: (Int(self)%3600)/60, seconds: Int(self)%60)
+    }
+}

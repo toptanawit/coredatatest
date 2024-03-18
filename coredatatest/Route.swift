@@ -5,9 +5,9 @@
 //  Created by Tanawit Poumloyfha on 12/3/2567 BE.
 //
 
-import Cocoa
+import Foundation
 
-class Route: NSObject {
+struct Route: Decodable {
     var stations: [Station]
     var fee: Int
     
