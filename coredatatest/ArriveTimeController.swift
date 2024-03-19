@@ -35,7 +35,7 @@ func getAllArrivingTime() -> [String: String] {
     // weekday
     for key in timetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsLightTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsLightTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -43,16 +43,16 @@ func getAllArrivingTime() -> [String: String] {
             var temp: TimeInterval = key.toTimeInterval()
             while temp < currentTimeInterval {
                 temp += interval
-                print("temp", temp, "interval", interval)
+//                print("temp", temp, "interval", interval)
             }
             btsLightTime = temp - currentTimeInterval
-            print("key", key,"now", currentTimeInterval)
+//            print("key", key,"now", currentTimeInterval)
         }
     }
     
     for key in extendedTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsLightExTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsLightExTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -67,7 +67,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in darkgreenTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsDarkTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsDarkTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -82,7 +82,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in blueTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            mrtBlueTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            mrtBlueTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -97,7 +97,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in purpleTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 5, minutes: 30, seconds: 0).toTimeInterval() {
-            mrtPurpleTime = TimeSpan(hours: 5, minutes: 30, seconds: 0).toTimeInterval()
+            mrtPurpleTime = TimeSpan(hours: 5, minutes: 30, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -120,7 +120,7 @@ func getAllArrivingTime() -> [String: String] {
     // weekend
     for key in holidayTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsLightEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsLightEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -135,7 +135,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in holidayExtendedTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsLightExEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsLightExEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -150,7 +150,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in holidayDarkgreenTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            btsDarkEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            btsDarkEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -165,7 +165,7 @@ func getAllArrivingTime() -> [String: String] {
     
     for key in holidayPurpleTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
-            mrtPurpleEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            mrtPurpleEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
             break
         }
         if key.toTimeInterval() < currentTimeInterval {
@@ -185,18 +185,27 @@ func getAllArrivingTime() -> [String: String] {
         }
     }
     
-    let result: [String: String] = ["btsLightTime": btsLightTime.toTimeSpan().toDateString(),
-                                    "btsLightExTime": btsLightExTime.toTimeSpan().toDateString(),
-                                    "btsDarkTime": btsDarkTime.toTimeSpan().toDateString(),
-                                    "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
-                                    "mrtPurpleTime": mrtPurpleTime.toTimeSpan().toDateString(),
-                                    "arlTime": arlTime.toTimeSpan().toDateString(),
-                                    // weekend
-                                    "btsLightEndTime": btsLightEndTime.toTimeSpan().toDateString(),
-                                    "btsLightExEndTime": btsLightExEndTime.toTimeSpan().toDateString(),
-                                    "btsDarkEndTime": btsDarkEndTime.toTimeSpan().toDateString(),
-                                    "mrtPurpleEndTime": mrtPurpleEndTime.toTimeSpan().toDateString(),
-                                    "arlEndTime": arlEndTime.toTimeSpan().toDateString()]
+    var result: [String: String] = [:]
+    
+    let currentDate = Date()
+    let calendar = Calendar.current
+    let dayOfWeek = calendar.component(.weekday, from: currentDate)
+    // Check if it's a weekend (Saturday or Sunday)
+    if dayOfWeek == 1 || dayOfWeek == 7 { // weekend
+        result = ["btsLightTime": btsLightEndTime.toTimeSpan().toDateString(),
+                  "btsLightExTime": btsLightExEndTime.toTimeSpan().toDateString(),
+                  "btsDarkTime": btsDarkEndTime.toTimeSpan().toDateString(),
+                  "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
+                  "mrtPurpleTime": mrtPurpleEndTime.toTimeSpan().toDateString(),
+                  "arlTime": arlEndTime.toTimeSpan().toDateString()]
+    } else { // weekday
+        result = ["btsLightTime": btsLightTime.toTimeSpan().toDateString(),
+                  "btsLightExTime": btsLightExTime.toTimeSpan().toDateString(),
+                  "btsDarkTime": btsDarkTime.toTimeSpan().toDateString(),
+                  "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
+                  "mrtPurpleTime": mrtPurpleTime.toTimeSpan().toDateString(),
+                  "arlTime": arlTime.toTimeSpan().toDateString()]
+    }
     
     return result
 }
