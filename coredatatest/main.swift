@@ -6,15 +6,6 @@
 //
 
 import Foundation
-import CoreData
-
-
-// use after made changes to data
-//saveContext()
-
-
-// ------------------------------
-
 
 //let testresult = getAllPossibleRoutes(start: "N8", end: "E17")
 // testresult [([(N8 data),(N7 data),...],fee),([(N8 data),(N7 data),...],fee),([(N8 data),(N7 data),...],fee),...]
@@ -31,8 +22,6 @@ for route in testresult {
     print("----------")
 }
 */
-
-//let testresult2 = getAllPossibleRoutes(start: "N8", end: "N7")
 
 // ------------------
 
