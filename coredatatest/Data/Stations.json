@@ -1096,5 +1096,779 @@
       "is_extended": false,
       "latitude": 13.754784492353917,
       "longitude": 100.52946873521685
+    },
+    {
+      "station_id": "G1",
+      "station_name": "Krung Thonburi BTS",
+      "station_line": "bts",
+      "station_linecolor": "gold",
+      "is_extended": false,
+      "latitude": 13.72115339383005,
+      "longitude": 100.50340895302062
+    },
+    {
+      "station_id": "G2",
+      "station_name": "Charoen Nakhon BTS",
+      "station_line": "bts",
+      "station_linecolor": "gold",
+      "is_extended": false,
+      "latitude": 13.72645326081236,
+      "longitude": 100.50909437141317
+    },
+    {
+      "station_id": "G3",
+      "station_name": "Khlong San BTS",
+      "station_line": "bts",
+      "station_linecolor": "gold",
+      "is_extended": false,
+      "latitude": 13.730521213718081,
+      "longitude": 100.5077204295055
+    },
+    {
+      "station_id": "YL01",
+      "station_name": "Lat Phrao MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.807036664715614,
+      "longitude": 100.57486631375053
+    },
+    {
+      "station_id": "YL02",
+      "station_name": "Phawana MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.800224159109693,
+      "longitude": 100.58425819078425
+    },
+    {
+      "station_id": "YL03",
+      "station_name": "Chok Chai 4 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.79451295050645,
+      "longitude": 100.59430632580737
+    },
+    {
+      "station_id": "YL04",
+      "station_name": "Lat Phrao 71 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.787166782328374,
+      "longitude": 100.60753157251071
+    },
+    {
+      "station_id": "YL05",
+      "station_name": "Lat Phrao 83 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.783768550949011,
+      "longitude": 100.61358757317566
+    },
+    {
+      "station_id": "YL06",
+      "station_name": "Mahat Thai MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.778434254445799,
+      "longitude": 100.62312324615412
+    },
+    {
+      "station_id": "YL07",
+      "station_name": "Lat Phrao 101 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.774702259510999,
+      "longitude": 100.62988226332924
+    },
+    {
+      "station_id": "YL08",
+      "station_name": "Bang Kapi MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.76928207640866,
+      "longitude": 100.63967729434091
+    },
+    {
+      "station_id": "YL09",
+      "station_name": "Yaek Lam Sali MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.761730011380093,
+      "longitude": 100.64550317318847
+    },
+    {
+      "station_id": "YL10",
+      "station_name": "Si Kritha MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.750230776969183,
+      "longitude": 100.64479816600651
+    },
+    {
+      "station_id": "YL11",
+      "station_name": "Hua Mak MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.736281845640281,
+      "longitude": 100.64115974190159
+    },
+    {
+      "station_id": "YL12",
+      "station_name": "Kalantan MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.725212219344826,
+      "longitude": 100.64189614624921
+    },
+    {
+      "station_id": "YL13",
+      "station_name": "Si Nut MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.711512052584567,
+      "longitude": 100.64410508916028
+    },
+    {
+      "station_id": "YL14",
+      "station_name": "Srinagarindra 38 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.700838903368894,
+      "longitude": 100.64656897282937
+    },
+    {
+      "station_id": "YL15",
+      "station_name": "Suan Luang Rama IX MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.690883183773906,
+      "longitude": 100.64719689229992
+    },
+    {
+      "station_id": "YL16",
+      "station_name": "Si Udom MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.67664915541864,
+      "longitude": 100.64615981392589
+    },
+    {
+      "station_id": "YL17",
+      "station_name": "Si Iam MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.666442674468252,
+      "longitude": 100.64459648718099
+    },
+    {
+      "station_id": "YL18",
+      "station_name": "Si La Salle MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.654978063923556,
+      "longitude": 100.64222238382536
+    },
+    {
+      "station_id": "YL19",
+      "station_name": "Si Bearing MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.64435739374045,
+      "longitude": 100.6367381378345
+    },
+    {
+      "station_id": "YL20",
+      "station_name": "Si Dan MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.633177780524006,
+      "longitude": 100.6301673745272
+    },
+    {
+      "station_id": "YL21",
+      "station_name": "Si Thepha MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.63003443373092,
+      "longitude": 100.6226836385602
+    },
+    {
+      "station_id": "YL22",
+      "station_name": "Thipphawan MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.636712120656702,
+      "longitude": 100.60994394748776
+    },
+    {
+      "station_id": "YL23",
+      "station_name": "Samrong MRT",
+      "station_line": "mrt",
+      "station_linecolor": "yellow",
+      "is_extended": false,
+      "latitude": 13.645207016445042,
+      "longitude": 100.59642937269035
+    },
+    {
+      "station_id": "RN01",
+      "station_name": "Chatuchak SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.826544137888856,
+      "longitude": 100.54941077651536
+    },
+    {
+      "station_id": "RN02",
+      "station_name": "Wat Samian Nari SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.841475711741928,
+      "longitude": 100.55736920342768
+    },
+    {
+      "station_id": "RN03",
+      "station_name": "Bang Khen SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.849119635492604,
+      "longitude": 100.5616159594482
+    },
+    {
+      "station_id": "RN04",
+      "station_name": "Thung Song Hong SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.860036392280676,
+      "longitude": 100.56755946342147
+    },
+    {
+      "station_id": "RN05",
+      "station_name": "Lak Si SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.886160001558554,
+      "longitude": 100.58186805060089
+    },
+    {
+      "station_id": "RN06",
+      "station_name": "Kan Kheha SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.898455025999342,
+      "longitude": 100.58894099891245
+    },
+    {
+      "station_id": "RN07",
+      "station_name": "Don Mueang SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.914688320957532,
+      "longitude": 100.59799230840169
+    },
+    {
+      "station_id": "RN08",
+      "station_name": "Lak Hok SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.965779424564177,
+      "longitude": 100.60520907248394
+    },
+    {
+      "station_id": "RN09",
+      "station_name": "Rangsit SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.990511823490102,
+      "longitude": 100.60212961517647
+    },
+    {
+      "station_id": "RL01",
+      "station_name": "Bang Son SRT",
+      "station_line": "srt",
+      "station_linecolor": "lightred",
+      "is_extended": false,
+      "latitude": 13.82220457338866,
+      "longitude": 100.53362592948194
+    },
+    {
+      "station_id": "RL02",
+      "station_name": "Bang Bamru SRT",
+      "station_line": "srt",
+      "station_linecolor": "lightred",
+      "is_extended": false,
+      "latitude": 13.791865342285803,
+      "longitude": 100.47744153275916
+    },
+    {
+      "station_id": "RL03",
+      "station_name": "Taling Chan SRT",
+      "station_line": "srt",
+      "station_linecolor": "lightred",
+      "is_extended": false,
+      "latitude": 13.789280233208762,
+      "longitude": 100.43969459728429
+    },
+    {
+      "station_id": "RCEN",
+      "station_name": "Bang Sue SRT",
+      "station_line": "srt",
+      "station_linecolor": "darkred",
+      "is_extended": false,
+      "latitude": 13.80423583257811,
+      "longitude": 100.54196023561401
+    },
+    {
+      "station_id": "PK01",
+      "station_name": "Nonthaburi Civic Centre MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.859796829102361,
+      "longitude": 100.5180072606697
+    },
+    {
+      "station_id": "PK02",
+      "station_name": "Khae Rai MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.862591458017144,
+      "longitude": 100.52074569456255
+    },
+    {
+      "station_id": "PK03",
+      "station_name": "Sanambin Nam MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.874211615894886,
+      "longitude": 100.51633627423392
+    },
+    {
+      "station_id": "PK04",
+      "station_name": "Samakkhi MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.889265284806466,
+      "longitude": 100.51059018862207
+    },
+    {
+      "station_id": "PK05",
+      "station_name": "Royal Irrigation Department MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.898622669768198,
+      "longitude": 100.50712810331576
+    },
+    {
+      "station_id": "PK06",
+      "station_name": "Yaek Pak Kret MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.90632503554369,
+      "longitude": 100.50541924672365
+    },
+    {
+      "station_id": "PK07",
+      "station_name": "Pak Kret Bypass MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.906533005832786,
+      "longitude": 100.51559741452387
+    },
+    {
+      "station_id": "PK08",
+      "station_name": "Chaeng Wattana-Pak Kret 28 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.904092469536824,
+      "longitude": 100.52921540911278
+    },
+    {
+      "station_id": "PK09",
+      "station_name": "Si Rat MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.900546663399851,
+      "longitude": 100.53997513324192
+    },
+    {
+      "station_id": "PK10",
+      "station_name": "Muang Thong Thani MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.897456489471683,
+      "longitude": 100.54839516083665
+    },
+    {
+      "station_id": "PK11",
+      "station_name": "Chaeng Watthana 14 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.893271784200866,
+      "longitude": 100.5602999874358
+    },
+    {
+      "station_id": "PK12",
+      "station_name": "Government Complex MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.890730235141218,
+      "longitude": 100.56738104206458
+    },
+    {
+      "station_id": "PK13",
+      "station_name": "National Telecom MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.887524395369532,
+      "longitude": 100.57565522479922
+    },
+    {
+      "station_id": "PK14",
+      "station_name": "Lak Si MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.884061277439853,
+      "longitude": 100.58247113357788
+    },
+    {
+      "station_id": "PK15",
+      "station_name": "Rajabhat Phranakhon MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.879935743220809,
+      "longitude": 100.58940560476348
+    },
+    {
+      "station_id": "PK16",
+      "station_name": "Wat Phra Sri Mahathat MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.874618057092706,
+      "longitude": 100.59713378485891
+    },
+    {
+      "station_id": "PK17",
+      "station_name": "Ram Intra 3 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.870872687771785,
+      "longitude": 100.6024749832153
+    },
+    {
+      "station_id": "PK18",
+      "station_name": "Lat Pla Khao MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.862700364573477,
+      "longitude": 100.61778191631055
+    },
+    {
+      "station_id": "PK19",
+      "station_name": "Ram Inthra Kor Mor 4 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.858272800465695,
+      "longitude": 100.62614428240688
+    },
+    {
+      "station_id": "PK20",
+      "station_name": "Maiyalap MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.854973541948793,
+      "longitude": 100.63221535293144
+    },
+    {
+      "station_id": "PK21",
+      "station_name": "Vatcharapol MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.849288343587778,
+      "longitude": 100.6428243888514
+    },
+    {
+      "station_id": "PK22",
+      "station_name": "Ram Inthra Kor Mor 6 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.845252111809138,
+      "longitude": 100.65031639469731
+    },
+    {
+      "station_id": "PK23",
+      "station_name": "Khu Bon MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.840763216281237,
+      "longitude": 100.65860796963867
+    },
+    {
+      "station_id": "PK24",
+      "station_name": "Ram Inthra Kor Mor 9 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.833831671977123,
+      "longitude": 100.6675724924005
+    },
+    {
+      "station_id": "PK25",
+      "station_name": "Outer Ring Road-Ram Inthra MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.82458980437969,
+      "longitude": 100.67718680649682
+    },
+    {
+      "station_id": "PK26",
+      "station_name": "Nopparat MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.81660479951491,
+      "longitude": 100.68546966755055
+    },
+    {
+      "station_id": "PK27",
+      "station_name": "Bang Chan MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.812753775328867,
+      "longitude": 100.70297058282267
+    },
+    {
+      "station_id": "PK28",
+      "station_name": "Setthabutbamphen MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.812688573653835,
+      "longitude": 100.71255415208935
+    },
+    {
+      "station_id": "PK29",
+      "station_name": "Min Buri Market MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.812505583800418,
+      "longitude": 100.72570047382565
+    },
+    {
+      "station_id": "PK30",
+      "station_name": "Min Buri MRT",
+      "station_line": "mrt",
+      "station_linecolor": "pink",
+      "is_extended": false,
+      "latitude": 13.808485365317972,
+      "longitude": 100.73260382391459
+    },
+    {
+      "station_id": "OR13",
+      "station_name": "Thailand Cultural Centre MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.765582564797883,
+      "longitude": 100.57073350533142
+    },
+    {
+      "station_id": "OR14",
+      "station_name": "MRTA MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.755408352574443,
+      "longitude": 100.57789718375743
+    },
+    {
+      "station_id": "OR15",
+      "station_name": "The Rama IX Golden MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.752326931068678,
+      "longitude": 100.5920671088781
+    },
+    {
+      "station_id": "OR16",
+      "station_name": "Ramkhamhaeng 12 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.751547129513861,
+      "longitude": 100.6097226401244
+    },
+    {
+      "station_id": "OR17",
+      "station_name": "Ramkhamhaeng MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.75897262471205,
+      "longitude": 100.6180684376428
+    },
+    {
+      "station_id": "OR18",
+      "station_name": "Sports Authority of Thailand MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.76029837934242,
+      "longitude": 100.62665348981709
+    },
+    {
+      "station_id": "OR19",
+      "station_name": "Ramkhamhaeng 34 MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.761663726992483,
+      "longitude": 100.63812053024884
+    },
+    {
+      "station_id": "OR20",
+      "station_name": "Lam Sali MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.76260482745214,
+      "longitude": 100.64649480667447
+    },
+    {
+      "station_id": "OR21",
+      "station_name": "Sri Burapha MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.768171173333071,
+      "longitude": 100.6587530287105
+    },
+    {
+      "station_id": "OR22",
+      "station_name": "Khlong Ban Ma MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.773867984787481,
+      "longitude": 100.66796164990252
+    },
+    {
+      "station_id": "OR23",
+      "station_name": "Sammakon MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.778265274697656,
+      "longitude": 100.67593141029096
+    },
+    {
+      "station_id": "OR24",
+      "station_name": "Nom Klao MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.786693844882416,
+      "longitude": 100.69121051043894
+    },
+    {
+      "station_id": "OR25",
+      "station_name": "Rat Phatthana MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.791596006710913,
+      "longitude": 100.70022163861913
+    },
+    {
+      "station_id": "OR26",
+      "station_name": "Min Phatthana MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.797303886989138,
+      "longitude": 100.71114437929734
+    },
+    {
+      "station_id": "OR27",
+      "station_name": "Keha Ramkhamhaeng MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.803400199211096,
+      "longitude": 100.7233659943124
+    },
+    {
+      "station_id": "OR28",
+      "station_name": "Min Buri MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.810040586559332,
+      "longitude": 100.7329199750459
+    },
+    {
+      "station_id": "OR29",
+      "station_name": "Yaek Rom Klao MRT",
+      "station_line": "mrt",
+      "station_linecolor": "orange",
+      "is_extended": false,
+      "latitude": 13.813259491917785,
+      "longitude": 100.73910643349238
     }
   ]
