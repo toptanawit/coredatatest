@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CoreData
+
 
 // use this one
 func getAllPossibleRoutes(start: String, end: String) -> [Route] {
@@ -57,14 +57,18 @@ func getAllPossibleRoutes(start: String, end: String) -> [Route] {
         ["N9", "BL14"], ["PP16", "BL10"], ["S12", "BL34"], ["N2", "A8"]
     ]
 
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Stations")
     do {
-        let results = try context.fetch(fetchRequest) as! [Stations]
-        for result in results {
-            stations.append(result.station_id!)
+        if let url = Bundle.main.url(forResource: "Stations", withExtension: "json") {
+            let data = try Data(contentsOf: url)
+            let decodedData = try JSONDecoder().decode([Station].self, from: data)
+            
+            for station in decodedData {
+                stations.append(station.station_id)
+            }
+            
         }
     } catch {
-        print("Failed to fetch data: \(error)")
+        print("Error reading or decoding JSON data: \(error)")
     }
 
     func addNode(station: String) {
@@ -366,16 +370,24 @@ func getAllPossibleRoutes2(start: String, end: String) -> [Route] {
         ["N9", "BL14"], ["PP16", "BL10"], ["S12", "BL34"], ["N2", "A8"]
     ]
 
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Stations")
+    let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+    let bundleURL = URL(fileURLWithPath: "jsondata.bundle", relativeTo: currentDirectoryURL)
+    let bundle = Bundle(url: bundleURL)
+    let jsonURL = bundle!.url(forResource: "Stations", withExtension: "json")!
+    
     do {
-        let results = try context.fetch(fetchRequest) as! [Stations]
-        for result in results {
-            stations.append(result.station_id!)
+        if let jsonData = try? Data(contentsOf: jsonURL) {
+            let decodedData = try JSONDecoder().decode([Station].self, from: jsonData)
+
+            for station in decodedData {
+                stations.append(station.station_id)
+            }
+            
         }
     } catch {
-        print("Failed to fetch data: \(error)")
+        print("Error reading or decoding JSON data: \(error)")
     }
-
+    
     func addNode(station: String) {
         adjacencyList[station] = []
     }
@@ -426,11 +438,6 @@ func getAllPossibleRoutes2(start: String, end: String) -> [Route] {
     
     let result = findAllRoutes(start: start, end: end)
     var stationsAllData: [[Station]] = []
-    
-    let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-    let bundleURL = URL(fileURLWithPath: "jsondata.bundle", relativeTo: currentDirectoryURL)
-    let bundle = Bundle(url: bundleURL)
-    let jsonURL = bundle!.url(forResource: "Stations", withExtension: "json")!
     
     do {
         if let jsonData = try? Data(contentsOf: jsonURL) {

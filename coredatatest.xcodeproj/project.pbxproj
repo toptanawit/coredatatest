@@ -13,11 +13,9 @@
 		7A00076B2BA8C2BA00195598 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0007652BA88EFD00195598 /* Timetable.swift */; };
 		7A00076D2BA8DE6E00195598 /* ArriveTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */; };
 		7A69C8CE2B9C95610074F6D1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C8CD2B9C95610074F6D1 /* main.swift */; };
-		7A69C8D72B9C95830074F6D1 /* Stations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C8D52B9C95830074F6D1 /* Stations.xcdatamodeld */; };
 		7A877FFE2BA089AD00FBD7C4 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A877FFD2BA089AD00FBD7C4 /* Queue.swift */; };
 		7A8780002BA08ADB00FBD7C4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A877FFF2BA08ADB00FBD7C4 /* Route.swift */; };
 		7A8780022BA0967700FBD7C4 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8780012BA0967700FBD7C4 /* RouteController.swift */; };
-		7A8780042BA096FB00FBD7C4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8780032BA096FB00FBD7C4 /* DataController.swift */; };
 		7A8EA3D02B9DDD2D001C960C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EA3CF2B9DDD2D001C960C /* Station.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,11 +40,9 @@
 		7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveTimeController.swift; sourceTree = "<group>"; };
 		7A69C8CA2B9C95610074F6D1 /* coredatatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = coredatatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A69C8CD2B9C95610074F6D1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		7A69C8D62B9C95830074F6D1 /* Stations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stations.xcdatamodel; sourceTree = "<group>"; };
 		7A877FFD2BA089AD00FBD7C4 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		7A877FFF2BA08ADB00FBD7C4 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		7A8780012BA0967700FBD7C4 /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
-		7A8780032BA096FB00FBD7C4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		7A8EA3CF2B9DDD2D001C960C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,25 +94,15 @@
 			children = (
 				7A69C8CD2B9C95610074F6D1 /* main.swift */,
 				7A8780012BA0967700FBD7C4 /* RouteController.swift */,
-				7A8780032BA096FB00FBD7C4 /* DataController.swift */,
 				7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */,
 				7A877FFF2BA08ADB00FBD7C4 /* Route.swift */,
 				7A8EA3CF2B9DDD2D001C960C /* Station.swift */,
 				7A877FFD2BA089AD00FBD7C4 /* Queue.swift */,
 				7A0007672BA8C10800195598 /* TimeSpan.swift */,
 				7A0007652BA88EFD00195598 /* Timetable.swift */,
-				7A69C8D42B9C95750074F6D1 /* DataModels */,
 				7A1A51792BA8699D0025F05C /* Data */,
 			);
 			path = coredatatest;
-			sourceTree = "<group>";
-		};
-		7A69C8D42B9C95750074F6D1 /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-				7A69C8D52B9C95830074F6D1 /* Stations.xcdatamodeld */,
-			);
-			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8780042BA096FB00FBD7C4 /* DataController.swift in Sources */,
-				7A69C8D72B9C95830074F6D1 /* Stations.xcdatamodeld in Sources */,
 				7A00076B2BA8C2BA00195598 /* Timetable.swift in Sources */,
 				7A8780022BA0967700FBD7C4 /* RouteController.swift in Sources */,
 				7A0007682BA8C10800195598 /* TimeSpan.swift in Sources */,
@@ -457,19 +441,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7A69C8D52B9C95830074F6D1 /* Stations.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7A69C8D62B9C95830074F6D1 /* Stations.xcdatamodel */,
-			);
-			currentVersion = 7A69C8D62B9C95830074F6D1 /* Stations.xcdatamodel */;
-			path = Stations.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A69C8C22B9C95610074F6D1 /* Project object */;
 }

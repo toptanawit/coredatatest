@@ -25,9 +25,18 @@ for route in testresult {
 
 // ------------------
 
+/*
 let testalltime = getAllArrivingTime()
 for (key, value) in testalltime {
     print(key, "-", value)
 }
+ */
 
+// ------------------
 
+let testinterval = getIntervalTime2(station: "A1")
+print("interval:",testinterval)
+let testinterval2 = getAllIntervalTime2()
+for (key, value) in testinterval2 {
+    print(key, "-", value)
+}
