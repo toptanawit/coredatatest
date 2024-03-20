@@ -271,3 +271,218 @@ var arlHolidayTimetable: [TimeSpan] = [
     TimeSpan(hours: 23, minutes: 30, seconds: 0),
     TimeSpan(hours: 23, minutes: 46, seconds: 0)
 ]
+
+// gold bts
+var goldTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0),
+    TimeSpan(hours: 7, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 16, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 8, seconds: 0),
+    TimeSpan(hours: 21, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 22, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0)
+]
+
+var goldHolidayTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0),
+    TimeSpan(hours: 10, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 15, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 8, seconds: 0),
+    TimeSpan(hours: 22, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 23, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 15, seconds: 0)
+]
+
+// yellow mrt
+var yellowTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 7, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 5, seconds: 0),
+    TimeSpan(hours: 9, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 17, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 5, seconds: 0),
+    TimeSpan(hours: 20, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0)
+]
+
+var yellowHolidayTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 15, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 20, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+]
+
+// pink mrt
+var pinkTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 6, minutes: 30, seconds: 0): TimeSpan(hours: 0, minutes: 5, seconds: 0),
+    TimeSpan(hours: 8, minutes: 30, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 16, minutes: 30, seconds: 0): TimeSpan(hours: 0, minutes: 5, seconds: 0),
+    TimeSpan(hours: 19, minutes: 30, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0)
+]
+
+var pinkHolidayTimetable: [TimeSpan: TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    
+    TimeSpan(hours: 6, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 10, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+    TimeSpan(hours: 20, minutes: 0, seconds: 0): TimeSpan(hours: 0, minutes: 10, seconds: 0),
+]
+
+// darkred srt
+var darkredTimetable: [TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0),
+    TimeSpan(hours: 5, minutes: 0, seconds: 0),
+    TimeSpan(hours: 5, minutes: 15, seconds: 0),
+    TimeSpan(hours: 5, minutes: 30, seconds: 0),
+    TimeSpan(hours: 5, minutes: 45, seconds: 0),
+    TimeSpan(hours: 6, minutes: 0, seconds: 0),
+    TimeSpan(hours: 6, minutes: 15, seconds: 0),
+    TimeSpan(hours: 6, minutes: 30, seconds: 0),
+    TimeSpan(hours: 6, minutes: 40, seconds: 0),
+    TimeSpan(hours: 6, minutes: 50, seconds: 0),
+    TimeSpan(hours: 7, minutes: 0, seconds: 0),
+    TimeSpan(hours: 7, minutes: 10, seconds: 0),
+    TimeSpan(hours: 7, minutes: 20, seconds: 0),
+    TimeSpan(hours: 7, minutes: 30, seconds: 0),
+    TimeSpan(hours: 7, minutes: 40, seconds: 0),
+    TimeSpan(hours: 7, minutes: 50, seconds: 0),
+    TimeSpan(hours: 8, minutes: 0, seconds: 0),
+    TimeSpan(hours: 8, minutes: 10, seconds: 0),
+    TimeSpan(hours: 8, minutes: 20, seconds: 0),
+    TimeSpan(hours: 8, minutes: 30, seconds: 0),
+    TimeSpan(hours: 8, minutes: 40, seconds: 0),
+    TimeSpan(hours: 8, minutes: 50, seconds: 0),
+    TimeSpan(hours: 9, minutes: 0, seconds: 0),
+    TimeSpan(hours: 9, minutes: 10, seconds: 0),
+    TimeSpan(hours: 9, minutes: 20, seconds: 0),
+    TimeSpan(hours: 9, minutes: 30, seconds: 0),
+    TimeSpan(hours: 9, minutes: 45, seconds: 0),
+    TimeSpan(hours: 10, minutes: 0, seconds: 0),
+    TimeSpan(hours: 10, minutes: 15, seconds: 0),
+    TimeSpan(hours: 10, minutes: 30, seconds: 0),
+    TimeSpan(hours: 10, minutes: 45, seconds: 0),
+    TimeSpan(hours: 11, minutes: 0, seconds: 0),
+    TimeSpan(hours: 11, minutes: 15, seconds: 0),
+    TimeSpan(hours: 11, minutes: 30, seconds: 0),
+    TimeSpan(hours: 11, minutes: 45, seconds: 0),
+    TimeSpan(hours: 12, minutes: 0, seconds: 0),
+    TimeSpan(hours: 12, minutes: 15, seconds: 0),
+    TimeSpan(hours: 12, minutes: 30, seconds: 0),
+    TimeSpan(hours: 12, minutes: 45, seconds: 0),
+    TimeSpan(hours: 13, minutes: 0, seconds: 0),
+    TimeSpan(hours: 13, minutes: 15, seconds: 0),
+    TimeSpan(hours: 13, minutes: 30, seconds: 0),
+    TimeSpan(hours: 13, minutes: 45, seconds: 0),
+    TimeSpan(hours: 14, minutes: 0, seconds: 0),
+    TimeSpan(hours: 14, minutes: 15, seconds: 0),
+    TimeSpan(hours: 14, minutes: 30, seconds: 0),
+    TimeSpan(hours: 14, minutes: 45, seconds: 0),
+    TimeSpan(hours: 15, minutes: 0, seconds: 0),
+    TimeSpan(hours: 15, minutes: 15, seconds: 0),
+    TimeSpan(hours: 15, minutes: 30, seconds: 0),
+    TimeSpan(hours: 15, minutes: 45, seconds: 0),
+    TimeSpan(hours: 16, minutes: 0, seconds: 0),
+    TimeSpan(hours: 16, minutes: 15, seconds: 0),
+    TimeSpan(hours: 16, minutes: 30, seconds: 0),
+    TimeSpan(hours: 16, minutes: 40, seconds: 0),
+    TimeSpan(hours: 16, minutes: 50, seconds: 0),
+    TimeSpan(hours: 17, minutes: 0, seconds: 0),
+    TimeSpan(hours: 17, minutes: 10, seconds: 0),
+    TimeSpan(hours: 17, minutes: 20, seconds: 0),
+    TimeSpan(hours: 17, minutes: 30, seconds: 0),
+    TimeSpan(hours: 17, minutes: 40, seconds: 0),
+    TimeSpan(hours: 17, minutes: 50, seconds: 0),
+    TimeSpan(hours: 18, minutes: 0, seconds: 0),
+    TimeSpan(hours: 18, minutes: 10, seconds: 0),
+    TimeSpan(hours: 18, minutes: 20, seconds: 0),
+    TimeSpan(hours: 18, minutes: 30, seconds: 0),
+    TimeSpan(hours: 18, minutes: 40, seconds: 0),
+    TimeSpan(hours: 18, minutes: 50, seconds: 0),
+    TimeSpan(hours: 19, minutes: 0, seconds: 0),
+    TimeSpan(hours: 19, minutes: 10, seconds: 0),
+    TimeSpan(hours: 19, minutes: 20, seconds: 0),
+    TimeSpan(hours: 19, minutes: 30, seconds: 0),
+    TimeSpan(hours: 19, minutes: 45, seconds: 0),
+    TimeSpan(hours: 20, minutes: 0, seconds: 0),
+    TimeSpan(hours: 20, minutes: 15, seconds: 0),
+    TimeSpan(hours: 20, minutes: 30, seconds: 0),
+    TimeSpan(hours: 20, minutes: 45, seconds: 0),
+    TimeSpan(hours: 21, minutes: 0, seconds: 0),
+    TimeSpan(hours: 21, minutes: 15, seconds: 0),
+    TimeSpan(hours: 21, minutes: 30, seconds: 0),
+    TimeSpan(hours: 21, minutes: 45, seconds: 0),
+    TimeSpan(hours: 22, minutes: 0, seconds: 0),
+    TimeSpan(hours: 22, minutes: 15, seconds: 0),
+    TimeSpan(hours: 22, minutes: 30, seconds: 0),
+    TimeSpan(hours: 22, minutes: 45, seconds: 0),
+    TimeSpan(hours: 23, minutes: 0, seconds: 0),
+    TimeSpan(hours: 23, minutes: 15, seconds: 0),
+    TimeSpan(hours: 23, minutes: 30, seconds: 0),
+    TimeSpan(hours: 23, minutes: 45, seconds: 0),
+]
+
+
+// lightred srt
+var lightredTimetable: [TimeSpan] = [
+    TimeSpan(hours: 0, minutes: 0, seconds: 0),
+    TimeSpan(hours: 5, minutes: 0, seconds: 0),
+    TimeSpan(hours: 5, minutes: 20, seconds: 0),
+    TimeSpan(hours: 5, minutes: 40, seconds: 0),
+    TimeSpan(hours: 6, minutes: 0, seconds: 0),
+    TimeSpan(hours: 6, minutes: 20, seconds: 0),
+    TimeSpan(hours: 6, minutes: 40, seconds: 0),
+    TimeSpan(hours: 7, minutes: 0, seconds: 0),
+    TimeSpan(hours: 7, minutes: 20, seconds: 0),
+    TimeSpan(hours: 7, minutes: 40, seconds: 0),
+    TimeSpan(hours: 8, minutes: 0, seconds: 0),
+    TimeSpan(hours: 8, minutes: 20, seconds: 0),
+    TimeSpan(hours: 8, minutes: 40, seconds: 0),
+    TimeSpan(hours: 9, minutes: 0, seconds: 0),
+    TimeSpan(hours: 9, minutes: 20, seconds: 0),
+    TimeSpan(hours: 9, minutes: 40, seconds: 0),
+    TimeSpan(hours: 10, minutes: 0, seconds: 0),
+    TimeSpan(hours: 10, minutes: 20, seconds: 0),
+    TimeSpan(hours: 10, minutes: 40, seconds: 0),
+    TimeSpan(hours: 11, minutes: 0, seconds: 0),
+    TimeSpan(hours: 11, minutes: 20, seconds: 0),
+    TimeSpan(hours: 11, minutes: 40, seconds: 0),
+    TimeSpan(hours: 12, minutes: 0, seconds: 0),
+    TimeSpan(hours: 12, minutes: 20, seconds: 0),
+    TimeSpan(hours: 12, minutes: 40, seconds: 0),
+    TimeSpan(hours: 13, minutes: 0, seconds: 0),
+    TimeSpan(hours: 13, minutes: 20, seconds: 0),
+    TimeSpan(hours: 13, minutes: 40, seconds: 0),
+    TimeSpan(hours: 14, minutes: 0, seconds: 0),
+    TimeSpan(hours: 14, minutes: 20, seconds: 0),
+    TimeSpan(hours: 14, minutes: 40, seconds: 0),
+    TimeSpan(hours: 15, minutes: 0, seconds: 0),
+    TimeSpan(hours: 15, minutes: 20, seconds: 0),
+    TimeSpan(hours: 15, minutes: 40, seconds: 0),
+    TimeSpan(hours: 16, minutes: 0, seconds: 0),
+    TimeSpan(hours: 16, minutes: 20, seconds: 0),
+    TimeSpan(hours: 16, minutes: 40, seconds: 0),
+    TimeSpan(hours: 17, minutes: 0, seconds: 0),
+    TimeSpan(hours: 17, minutes: 20, seconds: 0),
+    TimeSpan(hours: 17, minutes: 40, seconds: 0),
+    TimeSpan(hours: 18, minutes: 0, seconds: 0),
+    TimeSpan(hours: 18, minutes: 20, seconds: 0),
+    TimeSpan(hours: 18, minutes: 40, seconds: 0),
+    TimeSpan(hours: 19, minutes: 0, seconds: 0),
+    TimeSpan(hours: 19, minutes: 20, seconds: 0),
+    TimeSpan(hours: 19, minutes: 40, seconds: 0),
+    TimeSpan(hours: 20, minutes: 0, seconds: 0),
+    TimeSpan(hours: 20, minutes: 20, seconds: 0),
+    TimeSpan(hours: 20, minutes: 40, seconds: 0),
+    TimeSpan(hours: 21, minutes: 0, seconds: 0),
+    TimeSpan(hours: 21, minutes: 20, seconds: 0),
+    TimeSpan(hours: 21, minutes: 40, seconds: 0),
+    TimeSpan(hours: 22, minutes: 0, seconds: 0),
+    TimeSpan(hours: 22, minutes: 20, seconds: 0),
+    TimeSpan(hours: 22, minutes: 40, seconds: 0),
+    TimeSpan(hours: 23, minutes: 0, seconds: 0),
+    TimeSpan(hours: 23, minutes: 20, seconds: 0),
+    TimeSpan(hours: 23, minutes: 40, seconds: 0),
+]

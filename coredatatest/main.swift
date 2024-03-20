@@ -36,7 +36,7 @@ for (key, value) in testalltime {
 
 let testinterval = getIntervalTime2(station: "A1")
 print("interval:",testinterval)
-let testinterval2 = getAllIntervalTime2()
+let testinterval2 = getAllIntervalTime()
 for (key, value) in testinterval2 {
     print(key, "-", value)
 }
