@@ -16,12 +16,20 @@ func getAllArrivingTime() -> [String: String] {
     var mrtBlueTime: TimeInterval = 0
     var mrtPurpleTime: TimeInterval = 0
     var arlTime: TimeInterval = 0
+    var goldTime: TimeInterval = 0
+    var yellowTime: TimeInterval = 0
+    var pinkTime: TimeInterval = 0
+    var darkredTime: TimeInterval = 0
+    var lightredTime : TimeInterval = 0
     // weekend time
     var btsLightEndTime: TimeInterval = 0
     var btsLightExEndTime: TimeInterval = 0
     var btsDarkEndTime: TimeInterval = 0
     var mrtPurpleEndTime: TimeInterval = 0
     var arlEndTime: TimeInterval = 0
+    var goldEndTime: TimeInterval = 0
+    var yellowEndTime: TimeInterval = 0
+    var pinkEndTime: TimeInterval = 0
     
     let dateFormatter = DateFormatter()
     dateFormatter.timeZone = TimeZone(identifier: "Asia/Bangkok")
@@ -117,6 +125,65 @@ func getAllArrivingTime() -> [String: String] {
         }
     }
     
+    for key in goldTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            goldTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = goldTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            goldTime = temp - currentTimeInterval
+        }
+    }
+    
+    for key in yellowTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            yellowTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = yellowTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            yellowTime = temp - currentTimeInterval
+        }
+    }
+    
+    for key in pinkTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            pinkTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = pinkTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            pinkTime = temp - currentTimeInterval
+        }
+    }
+    
+    for key in darkredTimetable.sorted() {
+        if key.toTimeInterval() > currentTimeInterval {
+            darkredTime = key.toTimeInterval() - currentTimeInterval
+            break
+        }
+    }
+    
+    for key in lightredTimetable.sorted() {
+        if key.toTimeInterval() > currentTimeInterval {
+            lightredTime = key.toTimeInterval() - currentTimeInterval
+            break
+        }
+    }
+    
     // weekend
     for key in holidayTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
@@ -185,6 +252,51 @@ func getAllArrivingTime() -> [String: String] {
         }
     }
     
+    for key in goldHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            goldEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = goldHolidayTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            goldEndTime = temp - currentTimeInterval
+        }
+    }
+    
+    for key in yellowHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            yellowEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = yellowHolidayTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            yellowEndTime = temp - currentTimeInterval
+        }
+    }
+    
+    for key in pinkHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            pinkEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() - currentTimeInterval
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            interval = pinkHolidayTimetable[key]!.toTimeInterval()
+            var temp: TimeInterval = key.toTimeInterval()
+            while temp < currentTimeInterval {
+                temp += interval
+            }
+            pinkEndTime = temp - currentTimeInterval
+        }
+    }
+    
     var result: [String: String] = [:]
     
     let currentDate = Date()
@@ -197,14 +309,24 @@ func getAllArrivingTime() -> [String: String] {
                   "btsDarkTime": btsDarkEndTime.toTimeSpan().toDateString(),
                   "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
                   "mrtPurpleTime": mrtPurpleEndTime.toTimeSpan().toDateString(),
-                  "arlTime": arlEndTime.toTimeSpan().toDateString()]
+                  "arlTime": arlEndTime.toTimeSpan().toDateString(),
+                  "goldTime": goldEndTime.toTimeSpan().toDateString(),
+                  "yellowTime": yellowEndTime.toTimeSpan().toDateString(),
+                  "pinkTime": pinkEndTime.toTimeSpan().toDateString(),
+                  "darkRedTime": darkredTime.toTimeSpan().toDateString(),
+                  "lightRedTime": lightredTime.toTimeSpan().toDateString()]
     } else { // weekday
         result = ["btsLightTime": btsLightTime.toTimeSpan().toDateString(),
                   "btsLightExTime": btsLightExTime.toTimeSpan().toDateString(),
                   "btsDarkTime": btsDarkTime.toTimeSpan().toDateString(),
                   "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
                   "mrtPurpleTime": mrtPurpleTime.toTimeSpan().toDateString(),
-                  "arlTime": arlTime.toTimeSpan().toDateString()]
+                  "arlTime": arlTime.toTimeSpan().toDateString(),
+                  "goldTime": goldTime.toTimeSpan().toDateString(),
+                  "yellowTime": yellowTime.toTimeSpan().toDateString(),
+                  "pinkTime": pinkTime.toTimeSpan().toDateString(),
+                  "darkRedTime": darkredTime.toTimeSpan().toDateString(),
+                  "lightRedTime": lightredTime.toTimeSpan().toDateString()]
     }
     
     return result
@@ -277,7 +399,15 @@ func getIntervalTime(station: String) -> String {
                     }
                 }
             } else { // gold
-                print("gold timetable")
+                for key in goldHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = goldHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "mrt" {
             if linecolor == "blue" { // same as weekday
@@ -301,17 +431,33 @@ func getIntervalTime(station: String) -> String {
                     }
                 }
             } else if linecolor == "yellow" {
-                print("yellow timetable")
+                for key in yellowHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = yellowHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             } else { // pink
-                print("pink timetable")
+                for key in pinkHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = pinkHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "arl" { // est 15 mins between trains
             intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
         } else { // srt
             if linecolor == "darkred" {
-                print("darkred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
             } else { // lightred
-                print("lightred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 20, seconds: 0).toTimeInterval()
             }
         }
     } else { // weekday
@@ -347,7 +493,15 @@ func getIntervalTime(station: String) -> String {
                     }
                 }
             } else { // gold
-                print("gold timetable")
+                for key in goldTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = goldTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "mrt" {
             if linecolor == "blue" { // same as weekday
@@ -371,17 +525,33 @@ func getIntervalTime(station: String) -> String {
                     }
                 }
             } else if linecolor == "yellow" {
-                print("yellow timetable")
+                for key in yellowTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = yellowTimetable[key]!.toTimeInterval()
+                    }
+                }
             } else { // pink
-                print("pink timetable")
+                for key in pinkTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = pinkTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "arl" { // est 12 mins between trains
             intervalTime = TimeSpan(hours: 0, minutes: 12, seconds: 0).toTimeInterval()
         } else { // srt
             if linecolor == "darkred" {
-                print("darkred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
             } else { // lightred
-                print("lightred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 20, seconds: 0).toTimeInterval()
             }
         }
     }
@@ -461,7 +631,15 @@ func getIntervalTime2(station: String) -> String {
                     }
                 }
             } else { // gold
-                print("gold timetable")
+                for key in goldHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = goldHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "mrt" {
             if linecolor == "blue" { // same as weekday
@@ -485,17 +663,33 @@ func getIntervalTime2(station: String) -> String {
                     }
                 }
             } else if linecolor == "yellow" {
-                print("yellow timetable")
+                for key in yellowHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = yellowHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             } else { // pink
-                print("pink timetable")
+                for key in pinkHolidayTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = pinkHolidayTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "arl" { // est 15 mins between trains
             intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
         } else { // srt
             if linecolor == "darkred" {
-                print("darkred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
             } else { // lightred
-                print("lightred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 20, seconds: 0).toTimeInterval()
             }
         }
     } else { // weekday
@@ -531,7 +725,15 @@ func getIntervalTime2(station: String) -> String {
                     }
                 }
             } else { // gold
-                print("gold timetable")
+                for key in goldTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = goldTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "mrt" {
             if linecolor == "blue" { // same as weekday
@@ -555,17 +757,33 @@ func getIntervalTime2(station: String) -> String {
                     }
                 }
             } else if linecolor == "yellow" {
-                print("yellow timetable")
+                for key in yellowTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = yellowTimetable[key]!.toTimeInterval()
+                    }
+                }
             } else { // pink
-                print("pink timetable")
+                for key in pinkTimetable.keys.sorted() {
+                    if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+                        intervalTime = TimeSpan(hours: 0, minutes: 0, seconds: 0).toTimeInterval()
+                        break
+                    }
+                    if key.toTimeInterval() < currentTimeInterval {
+                        intervalTime = pinkTimetable[key]!.toTimeInterval()
+                    }
+                }
             }
         } else if line == "arl" { // est 12 mins between trains
             intervalTime = TimeSpan(hours: 0, minutes: 12, seconds: 0).toTimeInterval()
         } else { // srt
             if linecolor == "darkred" {
-                print("darkred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
             } else { // lightred
-                print("lightred timetable")
+                intervalTime = TimeSpan(hours: 0, minutes: 20, seconds: 0).toTimeInterval()
             }
         }
     }
@@ -583,12 +801,20 @@ func getAllIntervalTime() -> [String: String] {
     var mrtBlueTime: TimeInterval = 0
     var mrtPurpleTime: TimeInterval = 0
     var arlTime: TimeInterval = 0
+    var goldTime: TimeInterval = 0
+    var yellowTime: TimeInterval = 0
+    var pinkTime: TimeInterval = 0
+    var darkredTime: TimeInterval = 0
+    var lightredTime : TimeInterval = 0
     // weekend time
     var btsLightEndTime: TimeInterval = 0
     var btsLightExEndTime: TimeInterval = 0
     var btsDarkEndTime: TimeInterval = 0
     var mrtPurpleEndTime: TimeInterval = 0
     var arlEndTime: TimeInterval = 0
+    var goldEndTime: TimeInterval = 0
+    var yellowEndTime: TimeInterval = 0
+    var pinkEndTime: TimeInterval = 0
     
     let dateFormatter = DateFormatter()
     dateFormatter.timeZone = TimeZone(identifier: "Asia/Bangkok")
@@ -652,6 +878,40 @@ func getAllIntervalTime() -> [String: String] {
     
     arlTime = TimeSpan(hours: 0, minutes: 12, seconds: 0).toTimeInterval()
     
+    for key in goldTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            goldTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            goldTime = goldTimetable[key]!.toTimeInterval()
+        }
+    }
+    
+    for key in yellowTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            yellowTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            yellowTime = yellowTimetable[key]!.toTimeInterval()
+        }
+    }
+    
+    for key in pinkTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            pinkTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            pinkTime = pinkTimetable[key]!.toTimeInterval()
+        }
+    }
+    
+    darkredTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
+
+    lightredTime = TimeSpan(hours: 0, minutes: 20, seconds: 0).toTimeInterval()
+    
     // weekend
     for key in holidayTimetable.keys.sorted() {
         if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
@@ -695,6 +955,36 @@ func getAllIntervalTime() -> [String: String] {
     
     arlEndTime = TimeSpan(hours: 0, minutes: 15, seconds: 0).toTimeInterval()
     
+    for key in goldHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            goldEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            goldEndTime = goldHolidayTimetable[key]!.toTimeInterval()
+        }
+    }
+    
+    for key in yellowHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            yellowEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            yellowEndTime = yellowHolidayTimetable[key]!.toTimeInterval()
+        }
+    }
+    
+    for key in pinkHolidayTimetable.keys.sorted() {
+        if key.toTimeInterval() < currentTimeInterval && currentTimeInterval < TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval() {
+            pinkEndTime = TimeSpan(hours: 6, minutes: 0, seconds: 0).toTimeInterval()
+            break
+        }
+        if key.toTimeInterval() < currentTimeInterval {
+            pinkEndTime = pinkHolidayTimetable[key]!.toTimeInterval()
+        }
+    }
+    
     var result: [String: String] = [:]
     
     let currentDate = Date()
@@ -707,14 +997,24 @@ func getAllIntervalTime() -> [String: String] {
                   "btsDarkTime": btsDarkEndTime.toTimeSpan().toDateString(),
                   "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
                   "mrtPurpleTime": mrtPurpleEndTime.toTimeSpan().toDateString(),
-                  "arlTime": arlEndTime.toTimeSpan().toDateString()]
+                  "arlTime": arlEndTime.toTimeSpan().toDateString(),
+                  "goldTime": goldEndTime.toTimeSpan().toDateString(),
+                  "yellowTime": yellowEndTime.toTimeSpan().toDateString(),
+                  "pinkTime": pinkEndTime.toTimeSpan().toDateString(),
+                  "darkRedTime": darkredTime.toTimeSpan().toDateString(),
+                  "lightRedTime": lightredTime.toTimeSpan().toDateString()]
     } else { // weekday
         result = ["btsLightTime": btsLightTime.toTimeSpan().toDateString(),
                   "btsLightExTime": btsLightExTime.toTimeSpan().toDateString(),
                   "btsDarkTime": btsDarkTime.toTimeSpan().toDateString(),
                   "mrtBlueTime": mrtBlueTime.toTimeSpan().toDateString(),
                   "mrtPurpleTime": mrtPurpleTime.toTimeSpan().toDateString(),
-                  "arlTime": arlTime.toTimeSpan().toDateString()]
+                  "arlTime": arlTime.toTimeSpan().toDateString(),
+                  "goldTime": goldTime.toTimeSpan().toDateString(),
+                  "yellowTime": yellowTime.toTimeSpan().toDateString(),
+                  "pinkTime": pinkTime.toTimeSpan().toDateString(),
+                  "darkRedTime": darkredTime.toTimeSpan().toDateString(),
+                  "lightRedTime": lightredTime.toTimeSpan().toDateString()]
     }
     
     return result
