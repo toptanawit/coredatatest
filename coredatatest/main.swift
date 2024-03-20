@@ -7,21 +7,6 @@
 
 import Foundation
 
-//let testresult = getAllPossibleRoutes(start: "N8", end: "E17")
-// testresult [([(N8 data),(N7 data),...],fee),([(N8 data),(N7 data),...],fee),([(N8 data),(N7 data),...],fee),...]
-
-/*
-let testresult = getAllPossibleRoutes2(start: "N8", end: "N7")
-for route in testresult {
-    for station in route.stations {
-        print(station.station_id, station.station_name)
-    }
-    print("No. of stations:",route.stations.count)
-    print("Fees:", route.fee)
-    print("Time:", route.time)
-    print("----------")
-}
-*/
 
 // ------------------
 
@@ -34,9 +19,31 @@ for (key, value) in testalltime {
 
 // ------------------
 
+
+/*
 let testinterval = getIntervalTime2(station: "A1")
 print("interval:",testinterval)
 let testinterval2 = getAllIntervalTime()
 for (key, value) in testinterval2 {
     print(key, "-", value)
 }
+*/
+
+
+// ------------------
+
+
+let testresult = getAllPossibleRoutes2(start: "N9", end: "YL16")
+for route in testresult {
+    for station in route.stations {
+        print(station.station_id, station.station_name)
+    }
+    print("No. of stations:", route.stations.count - 1)
+    print("Fees:", route.fee)
+    print("Time:", route.time)
+    print("----------")
+}
+print("No. of routes:", testresult.count)
+
+
+
