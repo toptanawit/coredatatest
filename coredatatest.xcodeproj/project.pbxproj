@@ -17,6 +17,7 @@
 		7A8780002BA08ADB00FBD7C4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A877FFF2BA08ADB00FBD7C4 /* Route.swift */; };
 		7A8780022BA0967700FBD7C4 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8780012BA0967700FBD7C4 /* RouteController.swift */; };
 		7A8EA3D02B9DDD2D001C960C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EA3CF2B9DDD2D001C960C /* Station.swift */; };
+		7AD5A80E2BADE1920075F188 /* ParkingLots.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A80D2BADE1920075F188 /* ParkingLots.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		7A877FFF2BA08ADB00FBD7C4 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		7A8780012BA0967700FBD7C4 /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		7A8EA3CF2B9DDD2D001C960C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		7AD5A80D2BADE1920075F188 /* ParkingLots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ParkingLots.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		7A1A51792BA8699D0025F05C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7AD5A80D2BADE1920075F188 /* ParkingLots.json */,
 				7A00075A2BA88C6700195598 /* Stations.json */,
 			);
 			path = Data;
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD5A80E2BADE1920075F188 /* ParkingLots.json in Resources */,
 				7A0007642BA88C8900195598 /* Stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
