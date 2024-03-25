@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7A0007632BA88C8600195598 /* jsondata.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A00075F2BA88C7C00195598 /* jsondata.bundle */; };
-		7A0007642BA88C8900195598 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A00075A2BA88C6700195598 /* Stations.json */; };
 		7A0007682BA8C10800195598 /* TimeSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0007672BA8C10800195598 /* TimeSpan.swift */; };
 		7A00076B2BA8C2BA00195598 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0007652BA88EFD00195598 /* Timetable.swift */; };
-		7A00076D2BA8DE6E00195598 /* ArriveTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */; };
+		7A62215B2BB124B0000A94C5 /* ArriveTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A62215A2BB124B0000A94C5 /* ArriveTimeController.swift */; };
 		7A69C8CE2B9C95610074F6D1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C8CD2B9C95610074F6D1 /* main.swift */; };
 		7A877FFE2BA089AD00FBD7C4 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A877FFD2BA089AD00FBD7C4 /* Queue.swift */; };
 		7A8780002BA08ADB00FBD7C4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A877FFF2BA08ADB00FBD7C4 /* Route.swift */; };
 		7A8780022BA0967700FBD7C4 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8780012BA0967700FBD7C4 /* RouteController.swift */; };
 		7A8EA3D02B9DDD2D001C960C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EA3CF2B9DDD2D001C960C /* Station.swift */; };
+		7AB14D112BB0868800AD4978 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AB14D102BB0868800AD4978 /* Stations.json */; };
 		7AD5A80E2BADE1920075F188 /* ParkingLots.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A80D2BADE1920075F188 /* ParkingLots.json */; };
 /* End PBXBuildFile section */
 
@@ -34,17 +34,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7A00075A2BA88C6700195598 /* Stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		7A00075F2BA88C7C00195598 /* jsondata.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsondata.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0007652BA88EFD00195598 /* Timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
 		7A0007672BA8C10800195598 /* TimeSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpan.swift; sourceTree = "<group>"; };
-		7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveTimeController.swift; sourceTree = "<group>"; };
+		7A62215A2BB124B0000A94C5 /* ArriveTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveTimeController.swift; sourceTree = "<group>"; };
 		7A69C8CA2B9C95610074F6D1 /* coredatatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = coredatatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A69C8CD2B9C95610074F6D1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7A877FFD2BA089AD00FBD7C4 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		7A877FFF2BA08ADB00FBD7C4 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		7A8780012BA0967700FBD7C4 /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		7A8EA3CF2B9DDD2D001C960C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		7AB14D102BB0868800AD4978 /* Stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		7AD5A80D2BADE1920075F188 /* ParkingLots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ParkingLots.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +69,8 @@
 		7A1A51792BA8699D0025F05C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7AB14D102BB0868800AD4978 /* Stations.json */,
 				7AD5A80D2BADE1920075F188 /* ParkingLots.json */,
-				7A00075A2BA88C6700195598 /* Stations.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			children = (
 				7A69C8CD2B9C95610074F6D1 /* main.swift */,
 				7A8780012BA0967700FBD7C4 /* RouteController.swift */,
-				7A00076C2BA8DE6E00195598 /* ArriveTimeController.swift */,
+				7A62215A2BB124B0000A94C5 /* ArriveTimeController.swift */,
 				7A877FFF2BA08ADB00FBD7C4 /* Route.swift */,
 				7A8EA3CF2B9DDD2D001C960C /* Station.swift */,
 				7A877FFD2BA089AD00FBD7C4 /* Queue.swift */,
@@ -187,8 +187,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB14D112BB0868800AD4978 /* Stations.json in Resources */,
 				7AD5A80E2BADE1920075F188 /* ParkingLots.json in Resources */,
-				7A0007642BA88C8900195598 /* Stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,13 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A00076B2BA8C2BA00195598 /* Timetable.swift in Sources */,
+				7A62215B2BB124B0000A94C5 /* ArriveTimeController.swift in Sources */,
 				7A8780022BA0967700FBD7C4 /* RouteController.swift in Sources */,
 				7A0007682BA8C10800195598 /* TimeSpan.swift in Sources */,
 				7A8EA3D02B9DDD2D001C960C /* Station.swift in Sources */,
 				7A69C8CE2B9C95610074F6D1 /* main.swift in Sources */,
 				7A8780002BA08ADB00FBD7C4 /* Route.swift in Sources */,
 				7A877FFE2BA089AD00FBD7C4 /* Queue.swift in Sources */,
-				7A00076D2BA8DE6E00195598 /* ArriveTimeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

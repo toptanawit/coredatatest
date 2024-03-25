@@ -258,7 +258,11 @@ func getAllPossibleRoutes(start: String, end: String) -> [Route] {
                                                   station_linecolor: stationInfo.station_linecolor,
                                                   latitude: stationInfo.latitude,
                                                   longitude: stationInfo.longitude,
-                                                  is_extended: stationInfo.is_extended)
+                                                  is_extended: stationInfo.is_extended,
+                                                  start_time_1: stationInfo.start_time_1,
+                                                  start_time_2: stationInfo.start_time_2,
+                                                  last_time_1: stationInfo.last_time_1,
+                                                  last_time_2: stationInfo.last_time_2)
                         
                         stationsData.append(tempStation)
                     }
@@ -712,7 +716,11 @@ func getAllPossibleRoutes2(start: String, end: String) -> [Route] {
                                                   station_linecolor: stationInfo.station_linecolor,
                                                   latitude: stationInfo.latitude,
                                                   longitude: stationInfo.longitude,
-                                                  is_extended: stationInfo.is_extended)
+                                                  is_extended: stationInfo.is_extended,
+                                                  start_time_1: stationInfo.start_time_1,
+                                                  start_time_2: stationInfo.start_time_2,
+                                                  last_time_1: stationInfo.last_time_1,
+                                                  last_time_2: stationInfo.last_time_2)
                         
                         stationsData.append(tempStation)
                     }
