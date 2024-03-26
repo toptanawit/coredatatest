@@ -191,6 +191,14 @@ func getArrivingTime(station_id: String) -> [String] {
     if station_id == "BL01" {
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_3, last_time: last_time_3).toTimeSpan().toDateString())
     } else if station_id == "CEN" {
+        switch dayOfWeek {
+        case 1:
+            table = holidayDarkgreenTimetable
+        case 7:
+            table = holidayDarkgreenTimetable
+        default:
+            table = darkgreenTimetable
+        }
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_3, last_time: last_time_3).toTimeSpan().toDateString())
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_4, last_time: last_time_4).toTimeSpan().toDateString())
     }
@@ -398,6 +406,14 @@ func getArrivingTime2(station_id: String) -> [String] {
     if station_id == "BL01" {
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_3, last_time: last_time_3).toTimeSpan().toDateString())
     } else if station_id == "CEN" {
+        switch dayOfWeek {
+        case 1:
+            table = holidayDarkgreenTimetable
+        case 7:
+            table = holidayDarkgreenTimetable
+        default:
+            table = darkgreenTimetable
+        }
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_3, last_time: last_time_3).toTimeSpan().toDateString())
         result.append(calculateArrivingTime(timetable: table, start_time: start_time_4, last_time: last_time_4).toTimeSpan().toDateString())
     }
