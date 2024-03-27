@@ -281,11 +281,16 @@ func getArrivingTime2(station_id: String) -> [String] {
 //        print("start",startTimeInterval.toTimeSpan())
 
         // ----- change to test
-//        currentTimeInterval = 3600*24
-        if currentTimeInterval >= 0 && currentTimeInterval < startTimeInterval {
+//        currentTimeInterval = 3600*0 + 10*60
+        if currentTimeInterval < TimeSpan(hours: 23, minutes: 59, seconds: 59).toTimeInterval() && currentTimeInterval < startTimeInterval {
             currentTimeInterval += 86400
         }
 //        print("current", currentTimeInterval.toTimeSpan())
+        
+        if currentTimeInterval > lastTimeInterval && currentTimeInterval.truncatingRemainder(dividingBy: 86400) < startTimeInterval {
+            result = startTimeInterval
+            return result
+        }
         
         first: for (index, key) in timetableKeys.enumerated() {
             let nextKey = index+1 < timetableKeys.count ? timetableKeys[index+1] : TimeSpan(hours: 26, minutes: 0, seconds: 0)
@@ -299,23 +304,26 @@ func getArrivingTime2(station_id: String) -> [String] {
                 temp += interval
 //                print("--temp", temp.toTimeSpan())
                 
-                if temp >= currentTimeInterval && temp < lastTimeInterval {
-                    result = temp - currentTimeInterval
+                if temp >= currentTimeInterval && temp <= lastTimeInterval {
+//                    result = temp - currentTimeInterval
+                    result = temp
 //                    print("--normal", result, temp.toTimeSpan(), currentTimeInterval.toTimeSpan())
                     break first
                 } else
                 if temp > lastTimeInterval {
-                    if currentTimeInterval < 86400 {
-                        result = (currentTimeInterval + startTimeInterval).truncatingRemainder(dividingBy: 86400)
-                    } else {
-                        result = startTimeInterval - currentTimeInterval.truncatingRemainder(dividingBy: 86400)
-                    }
+//                    if currentTimeInterval < 86400 {
+//                        result = (currentTimeInterval + startTimeInterval).truncatingRemainder(dividingBy: 86400)
+//                    } else {
+//                        result = startTimeInterval - currentTimeInterval.truncatingRemainder(dividingBy: 86400)
+//                    }
+                    result = startTimeInterval
 //                    print("--out of service", currentTimeInterval.toTimeSpan())
                     break first
                 }
             }
         }
 
+        result = result.truncatingRemainder(dividingBy: 86400)
         
         return result
     }
