@@ -7,7 +7,7 @@
 
 import Foundation
 
-// ---- uae this one
+// ---- use this one
 
 func getArrivingTime(station_id: String) -> [String] {
     var start_time_1: String = "00:00:00"
@@ -75,9 +75,14 @@ func getArrivingTime(station_id: String) -> [String] {
         }
         
         var temp = startTimeInterval
-        
-        if currentTimeInterval >= 0 && currentTimeInterval < startTimeInterval {
+
+        if currentTimeInterval < TimeSpan(hours: 23, minutes: 59, seconds: 59).toTimeInterval() && currentTimeInterval < startTimeInterval {
             currentTimeInterval += 86400
+        }
+        
+        if currentTimeInterval > lastTimeInterval && currentTimeInterval.truncatingRemainder(dividingBy: 86400) < startTimeInterval {
+            result = startTimeInterval
+            return result
         }
         
         first: for (index, key) in timetableKeys.enumerated() {
@@ -88,21 +93,18 @@ func getArrivingTime(station_id: String) -> [String] {
             second: while temp < nextKey.toTimeInterval() && temp < currentTimeInterval && temp < lastTimeInterval  {
                 temp += interval
                 
-                if temp >= currentTimeInterval && temp < lastTimeInterval {
-                    result = temp - currentTimeInterval
+                if temp >= currentTimeInterval && temp <= lastTimeInterval {
+                    result = temp
                     break first
                 } else
                 if temp > lastTimeInterval {
-                    if currentTimeInterval < 86400 {
-                        result = (currentTimeInterval + startTimeInterval).truncatingRemainder(dividingBy: 86400)
-                    } else {
-                        result = startTimeInterval - currentTimeInterval.truncatingRemainder(dividingBy: 86400)
-                    }
+                    result = startTimeInterval
                     break first
                 }
             }
         }
 
+        result = result.truncatingRemainder(dividingBy: 86400)
         
         return result
     }
