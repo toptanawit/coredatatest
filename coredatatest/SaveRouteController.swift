@@ -102,6 +102,37 @@ func resetFavoriteRoutes() {
 }
 
 
+func deleteFavoriteRoute(route: Route) {
+    var tempStationArray: [String] = []
+    for station in route.stations {
+        tempStationArray.append(station.station_id)
+    }
+    let temp: [String: Any] = ["stations": tempStationArray,
+                               "fee": route.fee,
+                               "time": route.time]
+    
+    if var savedRoutes = UserDefaults.standard.array(forKey: "SavedRoutes") as? [[String: Any]] {
+        var isDuplicate = false
+        for savedRoute in savedRoutes {
+            if savedRoute["stations"] as! [String] == temp["stations"] as! [String] {
+                isDuplicate = true
+                break
+            }
+        }
+        
+        if isDuplicate {
+            savedRoutes.removeAll(where: { $0["stations"] as! [String] == temp["stations"] as! [String] })
+            UserDefaults.standard.set(savedRoutes, forKey: "SavedRoutes")
+
+            print("Deleted successfully.")
+        } else {
+            print("This route has not been saved yet.")
+        }
+    } else {
+        print("No saved routes found in UserDefaults.")
+    }
+}
+
 /* use this one
 func getFavoriteRoutes() -> [Route] {
     var retrievedRoutes: [Route] = []

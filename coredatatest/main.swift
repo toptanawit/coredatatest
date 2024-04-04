@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreData
 
 // ------------------
 
@@ -549,6 +548,7 @@ for route in testresult3 {
 let testresult4 = getAllPossibleRoutes4(start: "E4", end: "E3")
 for route in testresult4 {
     saveFavoriteRoutes(route: route)
+//    deleteFavoriteRoute(route: route)
 }
 
 //resetFavoriteRoutes()
