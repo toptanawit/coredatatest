@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 // ------------------
 
@@ -54,16 +54,16 @@ print("No. of routes:", testresult.count)
 
 // ------------------
 
-
+/*
 let stations = ["CEN","E1","S2","BL01","PP04","A4","YL01","RN04","PK30","RL02"]
 for station in stations {
     print(station, getArrivingTime2(station_id: station))
 }
-
+*/
 
 // ------------------
 
-/*
+
 func getAllPossibleRoutes4(start: String, end: String) -> [Route] {
     
     var adjacencyList: [String: [String]] = [:]
@@ -524,8 +524,37 @@ func getAllPossibleRoutes4(start: String, end: String) -> [Route] {
 }
 
 
+//let testresult2 = getAllPossibleRoutes4(start: "A1", end: "A8")
+//for route in testresult2 {
+//    for station in route.stations {
+//        print(station.station_id, station.station_name)
+//    }
+//    print("No. of stations:", route.stations.count - 1)
+//    print("Fees:", route.fee)
+//    print("Time:", route.time)
+//    print("----------")
+//}
+//print("No. of routes:", testresult2.count)
+
 let testresult2 = getAllPossibleRoutes4(start: "A1", end: "A8")
 for route in testresult2 {
+    saveFavoriteRoutes(route: route)
+}
+
+let testresult3 = getAllPossibleRoutes4(start: "A1", end: "A2")
+for route in testresult3 {
+    saveFavoriteRoutes(route: route)
+}
+
+let testresult4 = getAllPossibleRoutes4(start: "E4", end: "E3")
+for route in testresult4 {
+    saveFavoriteRoutes(route: route)
+}
+
+//resetFavoriteRoutes()
+
+let testresult5 = getFavoriteRoutes()
+for route in testresult5 {
     for station in route.stations {
         print(station.station_id, station.station_name)
     }
@@ -534,5 +563,6 @@ for route in testresult2 {
     print("Time:", route.time)
     print("----------")
 }
-print("No. of routes:", testresult2.count)
-*/
+print("No. of routes:", testresult5.count)
+
+
